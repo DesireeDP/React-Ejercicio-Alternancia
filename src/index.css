@@ -1,0 +1,57 @@
+:root {
+  /* Paleta Vampírica */
+  --bg-color: #0d0707; /* Negro con un ligero tinte rojizo */
+  --bg-color-secondary: #1a0b0b; /* Un negro/rojo un poco más claro para tarjetas */
+  --text-color: #d1c4c4; /* Gris claro mortecino para lectura */
+  --text-color-heading: #e0d5d5; /* Más blanco para los títulos */
+  --accent-color: #8a0303; /* Rojo sangre oscuro */
+  --accent-hover: #b30000; /* Rojo sangre vivo al pasar el ratón */
+  --border-color: #3a0e0e; /* Borde rojizo muy oscuro */
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+
+  /* Tipografías Góticas */
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Crimson Text', serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text-color-heading);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Transiciones globales para cuando implementemos el modo claro */
+body, nav, a, h1, h2, p, div {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}

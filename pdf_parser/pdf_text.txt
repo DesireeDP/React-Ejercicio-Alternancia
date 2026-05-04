@@ -1,0 +1,319 @@
+ 
+ 
+ 
+6-    Criterios de Evaluación 
+5-    Entregables. 
+4-    Libre configuración.         
+3-    Despliegues. 
+2-    Desarrollo web entorno cliente  
+1-     Introducción. 
+ 
+                                
+Contenidos
+
+ 
+React
+Pensamiento algorítmico    y paradigmas
+ 
+        Alternancia 
+                         
+Ejercicios en 
+ 
+1 
+----------------Page (0) Break----------------
+Página 1 de 9 
+                                                
+React 
+ 
+ 
+1 
+----------------Page (1) Break----------------
+Página 2 de 9 
+predefinidos del lenguaje. 
+•   R.A.3.  Escribe  código  utilizando  las  funcionalidades  aportadas  por  los  objetos 
+mecanismos de comunicación asíncrona entre cliente y servidor.  
+•   R.A.7.    Desarrolla    aplicaciones    web    dinámicas,    reconociendo    y    aplicando 
+modelo de objetos del documento. 
+•   R.A.6.  Desarrolla  aplicaciones  web  analizando  y  aplicando  las  características  del 
+de eventos 
+•   R.A.5. Desarrolla aplicaciones web interactivas integrando mecanismos de manejo 
+Resultados de aprendizaje 
+ 
+ 
+Desarrollo web entorno cliente
+ 
+funcione, sino también cómo se construye, se versiona, se despliega y se documenta. 
+Estas prácticas están diseñadas para simular un entorno de trabajo real, donde no solo importa que la aplicación 
+ 
+comprender distintos métodos de publicación en servidores web. 
+realizarás un segundo despliegue manual mediante FTP utilizando un servicio como InfinityFree, con el objetivo de 
+repositorio de GitHub, de forma que cada cambio se despliegue automáticamente en un dominio público. Además, 
+En  cuanto  al  despliegue,  utilizarás Vercel  para  publicar  tu  aplicación React  conectándola  directamente  con  tu 
+ 
+claro de tu progreso. Al finalizar, deberás entregar tanto el repositorio como la documentación técnica del proyecto. 
+que realizar commits organizados y coherentes por cada tarea completada, permitiendo así hacer un seguimiento 
+Cada ejercicio deberá ser gestionado mediante  control de versiones utilizando GitHub . Esto implica que tendrás 
+ 
+importancia al uso de herramientas profesionales que forman parte del flujo de trabajo real en el desarrollo web. 
+manejo  del  DOM  virtual  y  aplicarás  buenas  prácticas  de  diseño  y  documentación.  Además,  se  dará  especial 
+A  lo  largo  de  las  prácticas  desarrollarás  aplicaciones  interactivas,  trabajarás  con  componentes,  estado  (state), 
+ 
+públicamente. 
+una  aplicación  real  desde  cero,  cómo  se  organiza  el  código  y  cómo  se  despliega  en  un  entorno  accesible 
+utilizando React. El objetivo no es solo aprender a programar funcionalidades, sino entender cómo se construye 
+En esta serie de ejercicios vas a trabajar de forma progresiva en el desarrollo de aplicaciones web modernas 
+ 
+ 
+Introducción 
+ 
+React 
+ 
+ 
+1 
+----------------Page (2) Break----------------
+Página 3 de 9 
+son válidos. Como mejora, puedes añadir indicadores visuales que muestren el estado de validez de cada campo. 
+El formulario debe mostrar los errores en tiempo real sin recargar la página y no permitir el envío si los datos no 
+ 
+del formulario (onSubmit). 
+Además, tendrás que gestionar eventos como cambios en los inputs (onChange), pérdida de foco (onBlur) y envío 
+ 
+mínima para el mensaje. 
+Será  necesario  aplicar  validaciones  básicas  como  campos  obligatorios,  formato  de  email  válido  y  una  longitud 
+ 
+estado (useState) para su gestión. 
+En la parte de contacto deberás crear un formulario con los campos Nombre, Email y Mensaje, utilizando 
+Componente Formulario 
+Ejercicio 2. Formulario con validación en React (Contacto) 
+ 
+•    Sección activa visible según ruta. 
+•    Navegación sin recargar página. 
+•    Usar React Router. 
+Requisitos: 
+•    Contacto: Componente Formulario. 
+•    Servicios: Componente galería y blog 
+•    Inicio: Pantalla de Bienvenida con la descripción del proyecto.  
+Crear links con React Router. 
+Resumen:  
+en cada momento. 
+contenido se actualiza dinámicamente. Además, la aplicación debe mostrar de forma clara qué sección está activa 
+Es importante comprobar que al cambiar de sección no se produce una recarga completa de la página, sino que el 
+navegación entre ellas se realizará mediante el uso de React Router. 
+Deberás  crear  tres  secciones:  Inicio,  Servicios  y  Contacto,  cada  una  asociada  a  su  propio  componente.  La 
+Ejercicio 1 (Navegación con React Router) 
+ 
+Vamos a crear una web en React con diferentes componentes que contendrá lo siguiente: 
+ 
+React 
+ 
+ 
+1 
+----------------Page (3) Break----------------
+Página 4 de 9 
+visual en la aplicación.  
+En este ejercicio vas a trabajar el uso de variables CSS junto con       React para crear un sistema de cambio de tema 
+Ejercicio  5. Variables CSS +  React (Modo Oscuro/Claro)  
+ 
+publicaciones, lo que permitirá modificar el contenido en tiempo real.    
+Como   mejora,   puedes   añadir   funcionalidades   adicionales   como   botones   para   editar,   eliminar   y   destacar 
+ 
+elementos de forma ordenada y dinámica.   
+Cada post se mostrará como un componente independiente dentro de la interfaz, permitiendo visualizar múltiples 
+ 
+card” que se añadirá dinámicamente a la lista de publicaciones. 
+Deberás crear un formulario con los campos título y descripción. Al enviar el formulario, se generará un nuevo “post 
+ 
+trabajando la creación de estructuras dinámicas mediante componentes.    
+En  este  ejercicio  vas  a  desarrollar  un  pequeño  sistema  de  gestión  de  contenido  (CMS)  utilizando React, 
+Componente blog 
+Ejercicio 4. Sistema de posts dinámicos 
+ 
+imágenes más fluida. 
+Como mejora, puedes añadir animaciones con CSS o librerías como  Framer Motion para hacer la transición entre 
+ 
+Para su desarrollo utilizarás propiedades como src, alt, className y renderizado condicional (&& o ternarios). 
+ 
+Además, la imagen seleccionada deberá quedar visualmente resaltada para mejorar la experiencia de usuario. 
+ 
+principal. 
+dinámicamente según la selección del usuario. Al hacer clic en una miniatura, esta pasará a mostrarse como imagen 
+La  aplicación  deberá   mostrar  varias  miniaturas  de  imágenes  y  una  imagen  principal     que  se  actualizará 
+renderizado dinámico en React. 
+En este ejercicio vas a crear  una galería de imágenes dentro de la sección de Servicios , trabajando el estado y el 
+Componente Galería 
+Ejercicio 3. Galería de imágenes interactiva (Servicio)  
+React 
+ 
+ 
+1 
+----------------Page (4) Break----------------
+Página 5 de 9 
+Todo debe acabar en la rama    main  con sus correspondientes    pull request . 
+-     Feature/ejercicio2_x   
+-     Feature/ejercicio1_1   
+Ejemplo de nombre de ramas:    
+del trabajo.  
+evitando subir todo el proyecto en un único commit final. El objetivo es que se pueda seguir claramente la evolución 
+deberá desarrollarse de forma independiente y quedar reflejado mediante  commits diferenciados y descriptivos, 
+En  primer  lugar,  será  obligatorio  utilizar GitHub  como  sistema  de  control  de  versiones.  Cada  ejercicio 
+Primera parte 
+ 
+la que se organiza, versiona y publica el trabajo en entornos reales. 
+En esta parte del proyecto se evaluará no solo el funcionamiento de la aplicación, sino también la forma en 
+ 
+configuración de servicios de red. 
+•            R.A.5.  Verifica  la  ejecución  de  aplicaciones  web  comprobando  los  parámetros  de 
+criterios de configuración que garanticen la disponibilidad del servicio.  
+•            R.A.4.  Administra  servidores  de  transferencia  de  archivos,  evaluando  y  aplicando 
+Resultados de Aprendizaje 
+ 
+ 
+Despliegues
+ 
+ 
+interfaz cambie de apariencia en tiempo real. 
+Para  ello,  podrás  utilizar  Angular  para  modificar  clases  o  estilos  globales  mediante  binding,  permitiendo  que  la 
+ 
+botón deberá cambiar dinámicamente los estilos de la aplicación sin recargar la página. 
+Como  mejora  principal,  implementarás un  botón  que  permita  alternar  entre  modo  claro  y  modo  oscuro.  Este 
+ 
+distintos componentes de la aplicación. 
+Partirás  de  la  definición  de  variables  CSS  para  los  colores  principales  de  la  interfaz,  que  serán  utilizadas  en  los 
+ 
+React 
+ 
+ 
+1 
+----------------Page (5) Break----------------
+Página 6 de 9 
+Crear una cuenta y publicar el proyecto en un dominio público. 
+ 
+los archivos manualmente al servidor. 
+gratuito como  InfinityFree. En este caso, será necesario generar la versión de producción de Angular y transferir 
+Además, como segunda forma de despliegue, se deberá subir el proyecto mediante FTP a un servicio de hosting 
+Tercera parte 
+ 
+Debe publicarse lo que contiene la rama main. 
+actualizándose automáticamente cada vez que se realicen cambios en la rama principal.  
+despliegue  automático  de  la  aplicación.  De  este  modo,  el  proyecto  quedará  publicado  en  un  dominio  público, 
+Una  vez  finalizado el  desarrollo, el  repositorio  de GitHub  deberá  conectarse con  Vercel  para  realizar  el 
+Segunda Parte 
+ 
+React 
+ 
+ 
+1 
+----------------Page (6) Break----------------
+Página 7 de 9 
+ 
+para que otra persona pueda entenderlo y desplegarlo sin dificultades. 
+El objetivo es que el trabajo no solo funcione correctamente, sino que también esté bien explicado y estructurado 
+En este ejercicio deberás elaborar la documentación técnica completa del proyecto desarrollado en React. 
+ 
+1. Documentación del proyecto React 
+ 
+integración continua. 
+herramientas   de   generación   de   documentación,   control   de   versiones   y   de 
+•   R.A.6.  Elabora  la  documentación  de  la  aplicación  web  evaluando  y  seleccionando 
+Resultados de aprendizaje 
+ 
+ 
+Libre Configuración
+ 
+ 
+continua y publicación manual en servidor. 
+Este proceso permitirá trabajar un flujo de despliegue profesional, combinando control de versiones, integración 
+ 
+•    Acceso o URL del proyecto subido por FTP en InfinityFree. 
+•    URL pública del despliegue en Vercel. 
+•    Enlace al repositorio de GitHub con commits organizados. 
+Como resultado final, deberéis de entregar: 
+Final 
+ 
+ 
+React 
+ 
+ 
+1 
+----------------Page (7) Break----------------
+Página 8 de 9 
+-             Documentación. 
+-             URL de Infinityfree con la web funcionando. 
+-             URL Vercel con la web funcionando. 
+-             URL del Github. 
+-             Código de los ejercicios. 
+Se debe entregar lo siguiente: 
+ 
+ 
+Entregables
+ 
+ 
+ 
+ 
+otros desarrolladores o por ti mismo en el futuro. 
+El objetivo es que el código no solo funcione, sino que también sea   fácil de mantener, revisar y comprender por 
+ 
+especialmente en funciones o bloques que tengan cierta complejidad. 
+Es importante utilizar comentarios dentro del código que ayuden a entender la lógica  de cada parte del sistema, 
+ 
+funcionamiento de forma clara y comprensible. 
+Deberás   documentar   correctamente   los   componentes,   servicios   y   métodos,   explicando   su   propósito   y 
+ 
+prácticas de desarrollo. 
+En  este  ejercicio  te  centrarás  en  la  documentación  del  código  fuente  del  proyecto,  aplicando  buenas 
+ 
+2. Documentación de código React 
+ 
+Este documento debe estar estructurado, ser claro y servir como guía técnica del proyecto completo. 
+ 
+el proyecto correctamente en local y en entorno de producción. 
+Además, deberás incluir una guía básica de instalación y despliegue, indicando los pasos necesarios para ejecutar 
+ 
+implementadas y su funcionamiento dentro de la aplicación. 
+creados y la organización en módulos. También es necesario describir el sistema de routing, explicando las rutas 
+La documentación debe incluir una explicación clara de la arquitectura de la aplicación, detallando los componentes 
+React 
+ 
+ 
+1 
+----------------Page (8) Break----------------
+Página 9 de 9 
+•    Claridad, orden y presentación del documento. 
+•    Documentación del código con comentarios claros en componentes, servicios y métodos. 
+•    Inclusión de guía de instalación y despliegue. 
+•    Explicación clara de arquitectura, routing y estructura general. 
+•    Documentación completa del proyecto React. 
+5. Documentación del proyecto (20%) 
+•    Funcionamiento correcto de rutas en entorno de producción. 
+•    Correcta generación del build de producción de Angular. 
+•    Despliegue adicional mediante FTP en InfinityFree. 
+•    Aplicación accesible mediante URL pública funcional. 
+•    Despliegue correcto en Vercel con conexión al repositorio. 
+4. Despliegue de la aplicación (15%) 
+•    Evidencia clara del trabajo incremental en cada ejercicio. 
+•    No se aceptan repositorios con un único commit final. 
+•    Commits organizados, progresivos y con mensajes descriptivos. 
+•    Uso correcto de GitHub como sistema de control de versiones. 
+3. Control de versiones con GitHub (15%)  
+•    Separación adecuada de lógica y presentación. 
+•    Uso correcto de binding, directivas y manejo del DOM. 
+•    Código limpio, legible y bien estructurado. 
+•    Uso adecuado de buenas prácticas en React. 
+•    Correcta organización del proyecto en componentes, módulos y servicios. 
+2. Estructura y calidad del código (20%) 
+•    Las interacciones del usuario responden correctamente (eventos, formularios, etc.). 
+•    La navegación SPA se realiza sin recargas de página. 
+•    Se utilizan correctamente los componentes, rutas, formularios y servicios de React. 
+•    Todas las funcionalidades de los ejercicios están implementadas. 
+•    La aplicación funciona correctamente sin errores. 
+1. Funcionamiento de la aplicación (30%) 
+ 
+ 
+Criterios de Evaluación
+ 
+ 
+React 
+ 
+ 
+1 
+----------------Page (9) Break----------------

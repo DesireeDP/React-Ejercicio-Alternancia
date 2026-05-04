@@ -1,0 +1,59 @@
+.navbar {
+  background-color: #050202; /* Prácticamente negro */
+  border-bottom: 2px solid var(--border-color);
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover estilo sangre/vampiro */
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--accent-hover);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--text-color-heading);
+}
+
+.navbar a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Estado activo de la página actual */
+.navbar a.active {
+  color: var(--accent-hover);
+  font-weight: bold;
+}
+
+.navbar a.active::after {
+  width: 100%;
+  left: 0;
+  background-color: var(--accent-color);
+}

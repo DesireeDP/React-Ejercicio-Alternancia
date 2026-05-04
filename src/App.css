@@ -1,0 +1,35 @@
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 900px;
+  background-color: var(--bg-color-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: var(--shadow);
+  
+  /* Un ligero resplandor rojo vampírico */
+  box-shadow: 0 0 20px rgba(138, 3, 3, 0.1);
+}
+
+/* Animación de entrada suave para el contenido */
+.page-container {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
