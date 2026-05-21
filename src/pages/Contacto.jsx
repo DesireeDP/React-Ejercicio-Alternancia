@@ -1,13 +1,13 @@
-// Importamos 'useState' desde React. Esta herramienta nos permite guardar y cambiar datos dentro de nuestro componente.
+// Importamos 'useState' desde React. Esta herramienta permite guardar y cambiar datos dentro de nuestro componente.
 import { useState } from 'react';
-// Importamos los estilos específicos para que nuestro formulario se vea gótico y oscuro.
+// Importamos los estilos específicos para el formulario se vea gótico y oscuro.
 import './Contacto.css';
 
 function Contacto() {
-  // 1. ESTADOS (Donde guardamos la memoria de la página)
+  // 1. ESTADOS: Donde guardamos la memoria de la página
 
   // Aquí guardamos lo que el usuario escribe en cada campo del formulario.
-  // Inicialmente, todos los campos están vacíos (unas comillas sin texto).
+  // Inicialmente, todos los campos están vacíos.
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
@@ -23,7 +23,7 @@ function Contacto() {
   });
 
   // Aquí recordamos si el usuario ya ha hecho clic o escrito en un campo específico.
-  // Esto nos sirve para no mostrarle un error antes de que siquiera empiece a escribir.
+  // Esto sirve para no mostrar un error antes de que el usuario empiece a escribir.
   const [touched, setTouched] = useState({
     nombre: false,
     email: false,
@@ -40,7 +40,7 @@ function Contacto() {
   // Devuelve un mensaje de error si algo está mal, o se queda vacío si todo está bien.
   const validateField = (name, value) => {
     let error = ''; // Empezamos asumiendo que no hay error
-    
+
     // Evaluamos qué campo estamos comprobando
     switch (name) {
       case 'nombre':
@@ -48,37 +48,37 @@ function Contacto() {
         // Si después de quitar los espacios no queda nada, es que el campo está vacío.
         if (!value.trim()) {
           error = 'El nombre es obligatorio.';
-        } 
+        }
         // Si hay texto, pero tiene menos de 3 letras...
         else if (value.trim().length < 3) {
           error = 'El nombre debe tener al menos 3 caracteres.';
         }
         break;
-        
+
       case 'email':
         if (!value.trim()) {
           error = 'El email es obligatorio.';
-        } 
+        }
         // Esta "Expresión Regular" (regex) comprueba que el email tenga el formato correcto: texto@texto.texto
         else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
           error = 'El formato del email no es válido.';
         }
         break;
-        
+
       case 'mensaje':
         if (!value.trim()) {
           error = 'El mensaje es obligatorio.';
-        } 
+        }
         // El mensaje tiene que ser un poco más largo, al menos 10 caracteres.
         else if (value.trim().length < 10) {
           error = 'El mensaje debe tener al menos 10 caracteres.';
         }
         break;
-        
+
       default:
         break; // Si es un campo desconocido, no hacemos nada
     }
-    
+
     return error; // Devolvemos el error encontrado (o vacío si todo estaba bien)
   };
 
@@ -89,7 +89,7 @@ function Contacto() {
   const handleChange = (e) => {
     // 'e.target' es el input en el que estamos escribiendo. Extraemos su nombre y su valor actual.
     const { name, value } = e.target;
-    
+
     // Actualizamos lo que el usuario ha escrito en nuestra memoria (formData)
     setFormData({
       ...formData,    // Mantenemos lo que ya estaba en los otros campos
@@ -110,7 +110,7 @@ function Contacto() {
   // Esta función se dispara cuando el usuario HACE CLIC FUERA del input (pierde el foco)
   const handleBlur = (e) => {
     const { name, value } = e.target;
-    
+
     // Anotamos en nuestra memoria que el usuario ya ha interactuado con este campo.
     setTouched({
       ...touched,
@@ -128,7 +128,7 @@ function Contacto() {
   // Esta función se dispara al pulsar el botón de "Enviar Mensaje"
   const handleSubmit = (e) => {
     // Esto es muy importante: evita que el navegador recargue toda la página web por defecto.
-    e.preventDefault(); 
+    e.preventDefault();
 
     // Antes de enviar, revisamos los tres campos por última vez por si acaso.
     const newErrors = {
@@ -156,11 +156,11 @@ function Contacto() {
     if (!hasErrors) {
       // ¡Éxito! Mostramos nuestro mensaje de que todo ha ido bien.
       setSubmitSuccess(true);
-      
+
       // Vaciamos el formulario para que quede limpio de nuevo.
       setFormData({ nombre: '', email: '', mensaje: '' });
       setTouched({ nombre: false, email: false, mensaje: false });
-      
+
       // Configuramos un temporizador mágico: después de 5000 milisegundos (5 segundos),
       // ocultamos el mensaje de éxito automáticamente.
       setTimeout(() => {
@@ -172,7 +172,7 @@ function Contacto() {
   // Una pequeña función de ayuda para los estilos visuales
   const getInputClass = (fieldName) => {
     // Si el usuario aún no ha tocado el campo, no le ponemos ningún color especial
-    if (!touched[fieldName]) return ''; 
+    if (!touched[fieldName]) return '';
     // Si lo ha tocado y hay error, le ponemos la clase 'is-invalid' (rojo). Si está bien, 'is-valid' (verde).
     return errors[fieldName] ? 'is-invalid' : 'is-valid';
   };
@@ -193,13 +193,13 @@ function Contacto() {
 
       {/* El formulario: onSubmit se asocia a nuestra función, y noValidate apaga los errores feos del navegador */}
       <form className="contact-form" onSubmit={handleSubmit} noValidate>
-        
+
         {/* === SECCIÓN DEL NOMBRE === */}
         <div className="form-group">
           <label htmlFor="nombre">Nombre</label>
           <input
             type="text" // Es texto normal
-            id="nombre" 
+            id="nombre"
             name="nombre" // Esto tiene que coincidir exactamente con cómo lo llamamos en nuestro estado
             value={formData.nombre} // El valor siempre es el de nuestra memoria
             onChange={handleChange} // Cuando escriben, llamamos a handleChange
