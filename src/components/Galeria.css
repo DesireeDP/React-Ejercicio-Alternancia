@@ -255,3 +255,95 @@
     border-color: rgba(255, 51, 51, 0.5);
   }
 }
+
+/* ==========================================================================
+   Adaptaciones específicas para el Tema Sailor Moon en la Galería
+   ========================================================================== */
+
+/* Main view en Sailor Moon */
+body.theme-sailor-moon .galeria-main-view {
+  box-shadow: 0 8px 30px rgba(232, 67, 147, 0.1), 0 0 20px rgba(255, 105, 180, 0.08);
+}
+
+body.theme-sailor-moon .galeria-main-view:hover {
+  border-color: rgba(232, 67, 147, 0.4);
+  box-shadow: 0 8px 30px rgba(232, 67, 147, 0.15), 0 0 25px rgba(255, 105, 180, 0.15);
+}
+
+/* Info card superpuesta con gradiente Sailor Moon pastel y romántico */
+body.theme-sailor-moon .galeria-main-info {
+  background: linear-gradient(
+    to top,
+    rgba(255, 238, 242, 0.95) 0%,
+    rgba(255, 238, 242, 0.8) 70%,
+    rgba(255, 238, 242, 0) 100%
+  );
+  border-top-color: rgba(255, 105, 180, 0.2);
+  color: var(--text-color);
+}
+
+body.theme-sailor-moon .galeria-main-info h3 {
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+body.theme-sailor-moon .galeria-main-info p {
+  color: #55445c;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Título de miniaturas */
+body.theme-sailor-moon .galeria-thumbnails-title::after {
+  background-color: var(--accent-color);
+}
+
+/* Hover de Miniatura */
+body.theme-sailor-moon .galeria-thumb-btn {
+  box-shadow: 0 4px 10px rgba(232, 67, 147, 0.08);
+}
+
+body.theme-sailor-moon .galeria-thumb-btn:hover {
+  border-color: rgba(232, 67, 147, 0.5);
+  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.15);
+}
+
+body.theme-sailor-moon .galeria-thumb-btn.active-thumb {
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 15px rgba(232, 67, 147, 0.35);
+}
+
+body.theme-sailor-moon .galeria-thumb-btn .galeria-thumb-img {
+  filter: grayscale(15%) brightness(95%);
+}
+
+body.theme-sailor-moon .galeria-thumb-btn:hover .galeria-thumb-img,
+body.theme-sailor-moon .galeria-thumb-btn.active-thumb .galeria-thumb-img {
+  filter: grayscale(0%) brightness(100%);
+}
+
+/* Indicador activo en Sailor Moon: ¡Un punto de oro parpadeante! */
+body.theme-sailor-moon .galeria-thumb-active-overlay {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 215, 0, 0.6);
+  box-shadow: 0 0 5px rgba(232, 67, 147, 0.2);
+  animation: pulseGoldGlow 2s infinite ease-in-out;
+}
+
+body.theme-sailor-moon .galeria-thumb-active-dot {
+  background-color: #ffd700;
+  box-shadow: 0 0 8px #ffd700;
+}
+
+@keyframes pulseGoldGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+    border-color: rgba(255, 215, 0, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(255, 215, 0, 0);
+    border-color: rgba(255, 215, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+    border-color: rgba(255, 215, 0, 0.5);
+  }
+}

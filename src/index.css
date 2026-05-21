@@ -1,5 +1,5 @@
 :root {
-  /* Paleta Vampírica */
+  /* Paleta Vampírica (Por defecto) */
   --bg-color: #0d0707; /* Negro con un ligero tinte rojizo */
   --bg-color-secondary: #1a0b0b; /* Un negro/rojo un poco más claro para tarjetas */
   --text-color: #d1c4c4; /* Gris claro mortecino para lectura */
@@ -12,6 +12,20 @@
   /* Tipografías Góticas */
   --font-heading: 'Cinzel', serif;
   --font-body: 'Crimson Text', serif;
+}
+
+/* ==========================================================================
+   Sobreescrituras para el Tema Sailor Moon (Colores Pastel y Lunas)
+   ========================================================================== */
+body.theme-sailor-moon {
+  --bg-color: #fff0f5; /* Lavender Blush: un rosa/lavanda pastel súper limpio y de ensueño */
+  --bg-color-secondary: #ffeef2; /* Un rosa pastel un poco más denso para las tarjetas */
+  --text-color: #55445c; /* Violeta/ciruela oscuro con excelente legibilidad */
+  --text-color-heading: #d14972; /* Rosa cereza intenso y mágico para títulos */
+  --accent-color: #ff69b4; /* Rosa varita mágica brillante (HotPink) */
+  --accent-hover: #e84393; /* Rosa mágico vivo al pasar el cursor (DeepPink) */
+  --border-color: #ffccd5; /* Bordes rosa pastel */
+  --shadow: 0 8px 25px rgba(232, 67, 147, 0.15); /* Sombras rosadas y suaves */
 }
 
 body {
@@ -47,11 +61,16 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* En el tema de Sailor Moon atenuamos un poco la sombra de texto dura del h1 */
+body.theme-sailor-moon h1 {
+  text-shadow: 1px 1px 2px rgba(232, 67, 147, 0.2);
+}
+
 p {
   margin-bottom: 1rem;
 }
 
-/* Transiciones globales para cuando implementemos el modo claro */
-body, nav, a, h1, h2, p, div {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+/* Transiciones globales fluidas para cuando alternemos el tema mágico en tiempo real */
+body, nav, a, h1, h2, h3, h4, p, div, button, input, textarea, span, label {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
 }
