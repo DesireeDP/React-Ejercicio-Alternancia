@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Estilos del Sistema de Posts Dinámicos (CMS / Blog)
+   Estilos del Sistema de Posts Dinámicos 
    ========================================================================== */
 
 /* --- Títulos e Introducción del Blog --- */
@@ -169,7 +169,8 @@
 
 @media (max-width: 768px) {
   .blog-posts-grid {
-    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    grid-template-columns: 1fr;
+    /* Una columna en pantallas pequeñas */
   }
 }
 
@@ -189,7 +190,7 @@
   overflow: hidden;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  
+
   /* Animación de entrada al añadirse a la lista */
   animation: cardEnter 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
@@ -205,7 +206,7 @@
   border-color: rgba(212, 175, 55, 0.6);
   background-color: rgba(30, 20, 10, 0.65);
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5);
-  
+
   /* Animación de levitación sutil y elegante */
   animation: floatPost 4s ease-in-out infinite, cardEnter 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
@@ -252,7 +253,8 @@
 }
 
 .is-featured .card-title {
-  color: #ffebaa; /* Tono dorado pastel exquisito */
+  color: #ffebaa;
+  /* Tono dorado pastel exquisito */
 }
 
 .card-description {
@@ -450,6 +452,7 @@
     opacity: 0;
     transform: scale(0.9) translateY(15px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -461,9 +464,11 @@
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
+
   100% {
     transform: translateY(0);
   }

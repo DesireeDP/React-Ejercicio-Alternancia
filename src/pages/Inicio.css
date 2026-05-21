@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Estilos para la Página de Inicio (Bienvenida Chibi) 🌸🦇
+   ========================================================================== */
+
+/* Contenedor principal de la presentación chibi */
+.chibi-presentation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* El marco mágico para las chibis con efectos responsivos y dinámicos */
+.chibi-frame {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  /* Proporción de aspecto del banner para evitar saltos de layout */
+  aspect-ratio: 1.8 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid var(--border-color);
+  box-shadow: var(--shadow);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+/* Al pasar el cursor por encima del marco, flota un poquito de forma juguetona */
+.chibi-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* En el tema Sailor Moon el marco tiene una sombra rosada de ensueño al pasar el ratón */
+body.theme-sailor-moon .chibi-frame:hover {
+  border-color: rgba(255, 105, 180, 0.5);
+  box-shadow: 0 12px 30px rgba(255, 105, 180, 0.25);
+}
+
+/* Estilo base para ambas imágenes chibi */
+.chibi-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Transición ultra suave de opacidad y escala para el cambio de personalidad */
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Lógica del Tema Gótico (Por defecto) --- */
+.chibi-goth {
+  opacity: 1;
+  z-index: 2;
+  transform: scale(1);
+}
+
+.chibi-sailor {
+  opacity: 0;
+  z-index: 1;
+  transform: scale(0.95); /* Ligeramente más pequeño para crear efecto de profundidad al entrar */
+}
+
+/* --- Lógica del Tema Sailor Moon (Toggled) --- */
+body.theme-sailor-moon .chibi-goth {
+  opacity: 0;
+  z-index: 1;
+  transform: scale(0.95);
+}
+
+body.theme-sailor-moon .chibi-sailor {
+  opacity: 1;
+  z-index: 2;
+  transform: scale(1);
+}
+
+/* --- Secciones complementarias de bienvenida --- */
+.welcome-info {
+  margin-top: 1rem;
+}
+
+.welcome-info p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* Botones rápidos de acceso a las otras secciones */
+.quick-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.nav-explore-btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.nav-explore-btn:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Efectos de botón bajo el tema de Sailor Moon */
+body.theme-sailor-moon .nav-explore-btn {
+  background: linear-gradient(135deg, #ff69b4 0%, #ff8da1 100%);
+  border-color: var(--accent-color);
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+}
+
+body.theme-sailor-moon .nav-explore-btn:hover {
+  background: linear-gradient(135deg, #e84393 0%, #ff69b4 100%);
+  box-shadow: 0 6px 18px rgba(232, 67, 147, 0.4);
+}
