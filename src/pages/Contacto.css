@@ -1,0 +1,101 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--font-heading);
+  color: var(--text-color-heading);
+  font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px rgba(138, 3, 3, 0.4);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Clases de validación visual */
+.form-group input.is-invalid,
+.form-group textarea.is-invalid {
+  border-color: #ff3333;
+  box-shadow: 0 0 5px rgba(255, 51, 51, 0.3);
+}
+
+.form-group input.is-valid,
+.form-group textarea.is-valid {
+  border-color: #4a6b4a; /* Un verde oscuro mortecino */
+}
+
+/* Mensajes de error y éxito */
+.error-message {
+  color: #ff3333;
+  font-size: 0.85rem;
+  margin: 0;
+  animation: fadeIn 0.3s ease;
+}
+
+.success-message {
+  background-color: rgba(74, 107, 74, 0.2);
+  border: 1px solid #4a6b4a;
+  color: #a4cfa4;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 1rem;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Botón de envío */
+.submit-btn {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+  box-shadow: 0 0 15px rgba(179, 0, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  background-color: #3a0e0e;
+  color: #7a7a7a;
+  cursor: not-allowed;
+}
