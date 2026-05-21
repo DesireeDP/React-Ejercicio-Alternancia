@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Estilos del Sistema de Posts Dinámicos (CMS / Blog)
+   Estilos del Sistema de Posts Dinámicos 
    ========================================================================== */
 
 /* --- Títulos e Introducción del Blog --- */
@@ -169,7 +169,8 @@
 
 @media (max-width: 768px) {
   .blog-posts-grid {
-    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    grid-template-columns: 1fr;
+    /* Una columna en pantallas pequeñas */
   }
 }
 
@@ -189,7 +190,7 @@
   overflow: hidden;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  
+
   /* Animación de entrada al añadirse a la lista */
   animation: cardEnter 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
@@ -205,7 +206,7 @@
   border-color: rgba(212, 175, 55, 0.6);
   background-color: rgba(30, 20, 10, 0.65);
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5);
-  
+
   /* Animación de levitación sutil y elegante */
   animation: floatPost 4s ease-in-out infinite, cardEnter 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
@@ -252,7 +253,8 @@
 }
 
 .is-featured .card-title {
-  color: #ffebaa; /* Tono dorado pastel exquisito */
+  color: #ffebaa;
+  /* Tono dorado pastel exquisito */
 }
 
 .card-description {
@@ -450,6 +452,7 @@
     opacity: 0;
     transform: scale(0.9) translateY(15px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -461,210 +464,12 @@
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
+
   100% {
     transform: translateY(0);
   }
 }
-
-/* ==========================================================================
-   ¡Magia en Acción! Adaptaciones del Blog para el Tema Sailor Moon 🌙✨
-   ========================================================================== */
-
-/* Con estos estilos sobreescribimos los colores vampíricos oscuros
-   por unos tonos pastel súper adorables inspirados en las guerreras de la luna. */
-
-/* Ajustamos el separador del blog en modo Sailor Moon */
-body.theme-sailor-moon .blog-section {
-  border-top: 2px dashed var(--border-color);
-}
-
-/* El contenedor del formulario de creación se vuelve súper elegante y luminoso */
-body.theme-sailor-moon .blog-form-container {
-  background-color: var(--bg-color-secondary);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 8px 30px rgba(232, 67, 147, 0.08);
-}
-
-/* Un brillo mágico rosado para cuando pases el ratón sobre el formulario */
-body.theme-sailor-moon .blog-form-container:hover {
-  border-color: rgba(255, 105, 180, 0.35);
-  box-shadow: 0 8px 35px rgba(255, 105, 180, 0.15);
-}
-
-/* El título dentro del formulario de crónicas mágicas */
-body.theme-sailor-moon .blog-form-container h3 {
-  border-bottom: 1px solid var(--border-color);
-}
-
-/* Los inputs de escritura: blancos, limpios y muy legibles */
-body.theme-sailor-moon .blog-form-group input,
-body.theme-sailor-moon .blog-form-group textarea {
-  background-color: #ffffff;
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-}
-
-/* ¡Al hacer click en escribir, el input se ilumina con polvo de estrellas rosa! */
-body.theme-sailor-moon .blog-form-group input:focus,
-body.theme-sailor-moon .blog-form-group textarea:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 12px rgba(255, 105, 180, 0.4);
-}
-
-/* El botón de publicar ahora es una varita de transformación mágica con gradiente brillante */
-body.theme-sailor-moon .blog-submit-btn {
-  background: linear-gradient(135deg, #ff69b4 0%, #ff8da1 100%);
-  color: #ffffff;
-  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* Animación sutil y cambio de color al pasar el cursor por encima */
-body.theme-sailor-moon .blog-submit-btn:hover {
-  background: linear-gradient(135deg, #e84393 0%, #ff69b4 100%);
-  box-shadow: 0 6px 20px rgba(232, 67, 147, 0.45);
-}
-
-/* Las tarjetas del blog se convierten en vasos de leche de fresa translúcidos (Glassmorphism) */
-body.theme-sailor-moon .blog-post-card {
-  background-color: rgba(255, 255, 255, 0.65);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 6px 18px rgba(232, 67, 147, 0.05);
-}
-
-/* Al flotar por encima, la tarjeta sube con gracia y tiene un halo rosa adorable */
-body.theme-sailor-moon .blog-post-card:hover {
-  border-color: rgba(255, 105, 180, 0.4);
-  box-shadow: 0 12px 28px rgba(255, 105, 180, 0.12), 0 4px 10px rgba(232, 67, 147, 0.03);
-}
-
-/* Las crónicas destacadas: un diseño cósmico y de ensueño */
-body.theme-sailor-moon .blog-post-card.is-featured {
-  border-color: rgba(255, 215, 0, 0.55); /* Borde dorado de estrella */
-  background: linear-gradient(135deg, rgba(255, 240, 245, 0.9) 0%, rgba(255, 222, 233, 0.9) 100%);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.25), 0 8px 25px rgba(232, 67, 147, 0.08);
-}
-
-body.theme-sailor-moon .blog-post-card.is-featured:hover {
-  border-color: rgba(255, 215, 0, 0.9);
-  box-shadow: 0 0 28px rgba(255, 215, 0, 0.45), 0 12px 30px rgba(232, 67, 147, 0.15);
-}
-
-/* La placa dorada de destacado: ahora combina oro lunar y rosa pastel */
-body.theme-sailor-moon .card-featured-badge {
-  background: linear-gradient(135deg, #ffd700 0%, #ffccd5 100%);
-  color: #55445c;
-  font-weight: bold;
-}
-
-/* El título en los posts normales y destacados */
-body.theme-sailor-moon .card-title {
-  color: var(--text-color-heading);
-}
-
-body.theme-sailor-moon .is-featured .card-title {
-  color: #b82d56; /* Tono magenta/cereza precioso para destacar el título */
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
-}
-
-/* Ajustamos el color de la fecha de la crónica */
-body.theme-sailor-moon .card-date {
-  color: #8c7894;
-}
-
-/* Separador del pie de la tarjeta */
-body.theme-sailor-moon .card-footer-actions {
-  border-top: 1px solid var(--border-color);
-}
-
-body.theme-sailor-moon .is-featured .card-footer-actions {
-  border-top-color: rgba(255, 215, 0, 0.25);
-}
-
-/* Estilo de los botones de acción (Editar, Eliminar, Destacar) */
-body.theme-sailor-moon .btn-action {
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-}
-
-/* Al pasar por encima del botón de acción */
-body.theme-sailor-moon .btn-action:hover {
-  background-color: rgba(255, 105, 180, 0.08);
-  color: var(--text-color-heading);
-  border-color: rgba(255, 105, 180, 0.3);
-}
-
-/* El botón de destacar cuando está activo (con estrella de oro) */
-body.theme-sailor-moon .btn-feature:hover,
-body.theme-sailor-moon .btn-feature.active {
-  border-color: rgba(255, 215, 0, 0.7);
-  color: #d4af37;
-  background-color: rgba(255, 215, 0, 0.12);
-}
-
-/* Hover de botón eliminar: rosa dulce pero de advertencia */
-body.theme-sailor-moon .btn-delete:hover {
-  border-color: rgba(232, 67, 147, 0.5);
-  background-color: rgba(232, 67, 147, 0.08);
-  color: #e84393;
-}
-
-/* Estilo en modo edición para Sailor Moon */
-body.theme-sailor-moon .blog-post-card.is-editing {
-  border-color: var(--accent-color);
-  background-color: rgba(255, 245, 247, 0.95);
-  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.2);
-}
-
-body.theme-sailor-moon .card-edit-title {
-  color: var(--text-color-heading);
-  border-bottom: 1px solid rgba(255, 105, 180, 0.2);
-}
-
-/* Los inputs del formulario de edición rápida */
-body.theme-sailor-moon .card-edit-group input,
-body.theme-sailor-moon .card-edit-group textarea {
-  background-color: #ffffff;
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-}
-
-body.theme-sailor-moon .card-edit-group input:focus,
-body.theme-sailor-moon .card-edit-group textarea:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.35);
-}
-
-/* Botones de Guardar y Cancelar */
-body.theme-sailor-moon .btn-save {
-  background-color: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  color: #ffffff;
-}
-
-body.theme-sailor-moon .btn-save:hover {
-  background-color: var(--accent-hover);
-  border-color: var(--accent-hover);
-  box-shadow: 0 4px 12px rgba(232, 67, 147, 0.25);
-}
-
-body.theme-sailor-moon .btn-cancel {
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-}
-
-body.theme-sailor-moon .btn-cancel:hover {
-  background-color: rgba(255, 105, 180, 0.08);
-  color: var(--text-color-heading);
-}
-
-/* Estado de lista vacía en modo Sailor Moon */
-body.theme-sailor-moon .blog-empty-state {
-  background-color: var(--bg-color-secondary);
-  border: 1px solid var(--border-color);
-  box-shadow: inset 0 0 15px rgba(255, 105, 180, 0.03);
-}
-

@@ -26,7 +26,21 @@ body.theme-sailor-moon {
   --accent-hover: #e84393; /* Rosa mágico vivo al pasar el cursor (DeepPink) */
   --border-color: #ffccd5; /* Bordes rosa pastel */
   --shadow: 0 8px 25px rgba(232, 67, 147, 0.15); /* Sombras rosadas y suaves */
+
+  /* ¡Tipografías mágicas súper redonditas y gorditas de Sailor Moon! 🌸 */
+  --font-heading: 'Fredoka', sans-serif;
+  --font-body: 'Fredoka', sans-serif;
 }
+
+/* Ajustes especiales para que la letra redonda se vea aún más acolchada y adorable */
+body.theme-sailor-moon h1,
+body.theme-sailor-moon h2,
+body.theme-sailor-moon h3,
+body.theme-sailor-moon h4 {
+  font-weight: 700; /* Letra bien gordita */
+  letter-spacing: 0.5px; /* Efecto burbuja juntando un pelín los caracteres */
+}
+
 
 body {
   margin: 0;
